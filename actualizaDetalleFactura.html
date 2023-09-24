@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="icon" href="icono.png" type="image/x-icon">
+	<title>Actualizar Detalles de Facturas</title>
+</head>
+<body>
+
+<!--Menú de las secciones-->
+	<header id="main-header">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="clientes.html">Cliente</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="facturas.html">Facturas</a></li>
+                    <li><a href="detalleFactura.html">Detalles Facturas</a></li>
+                    <li><a href="reportes.html">Reportes</a></li>
+                </ul>
+            </nav>
+    </header>
+
+<!--Inicio del sitio y bienvenida-->
+    <h1>Detalles de facturas</h1>
+    	<h2>Formulario para actualizar la información de los detalles de tus facturas</h2>
+
+<!--Formulario para dar de alta clientes-->
+
+<form method="POST" action="actualizaDetalleFactura.php">
+	
+	<div align="center" class="formularios">
+
+	<div>
+		<p>Ingresa el ID del detalle que deseas modificar.</p>
+		<label>ID del detalle</label><br>
+		<input type="text" name="idDetalle" required="">
+	</div>
+
+	<br>
+
+	<div align="center">
+		<p>Actualiza la información correspondiente.</p>
+		<label>ID de la factura</label><br>
+		<input type="text" name="IdFactura" required="">
+	</div>
+
+	<br>
+
+	<div align="center">
+		<label>idProducto</label><br>
+		<input type="text" name="idProducto" required="">
+	</div>
+
+	<br>
+
+	<div align="center">
+		<label>Cantidad</label><br>
+		<input type="text" name="Cantidad" required="">
+	</div>
+
+	<br>
+
+	<div align="center">
+		<input id="boton1" type="submit" value="Actualizar" name="Actualizar"/>
+	
+	</div>
+</form>
+
+<br>
+<div align="center">
+	
+	<!--BOTÓN PARA CONSULTAR-->
+	<form method="POST" action="consultaDetallesFactura.php">
+		<input id="boton1" type="submit" name="VerDetalles" value="Ver Detalles">
+	</form>
+		
+</div>
+
+<br><br>
+
+<!--PIE DE PÁGINA-->
+<footer>
+    <p align="center"><a href="https://linktr.ee/yen_hzu" target="_blank">Desarrollado por Yenifer Hernández</a></p>
+</footer>
+
+</body>
+</html>

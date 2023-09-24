@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="icon" href="icono.png" type="image/x-icon">
+	<title>Actualizar Productos</title>
+</head>
+<body>
+
+<!--Menú de las secciones-->
+	<header id="main-header">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="clientes.html">Cliente</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="facturas.html">Facturas</a></li>
+                    <li><a href="detalleFactura.html">Detalles Facturas</a></li>
+                    <li><a href="reportes.html">Reportes</a></li>
+                </ul>
+            </nav>
+    </header>
+
+<!--Inicio del sitio y bienvenida-->
+    <h1>Productos</h1>
+    	<h2>Formulario para actualizar la información de tus productos</h2>
+
+<!--Formulario para dar de alta clientes-->
+
+<form method="POST" action="actualizaProductos.php">
+	
+	<div align="center" class="formularios">
+
+	<div>
+		<p>Ingresa el ID del producto cuyos datos deseas modificar.</p>
+		<label>ID del producto</label><br>
+		<input type="text" name="idProducto" required="">
+	</div>
+
+	<br>
+
+	<div align="center">
+		<p>Actualiza la información correspondiente.</p>
+		<label>Nombre del producto</label><br>
+		<input type="text" name="Nombre" required="">
+	</div>
+
+	<br>
+
+	<div align="center">
+		<label>Marca</label><br>
+		<input type="text" name="Marca" required="">
+	</div>
+
+	<br>
+
+	<div align="center">
+		<label>Costo</label><br>
+		<input type="text" name="Costo" required="">
+	</div>
+
+	<br>
+
+	<div align="center">
+		<label>Precio Venta</label><br>
+		<input type="text" name="PrecioVenta" required="">
+	</div>
+
+	<br>
+
+	<div align="center">
+		<input id="boton1" type="submit" value="Actualizar" name="Actualizar"/>
+	
+	</div>
+</form>
+
+<br>
+<div align="center">
+	
+	<!--BOTÓN PARA CONSULTAR-->
+	<form method="POST" action="consultaProductos.php">
+		<input id="boton1" type="submit" name="VerClientes" value="Ver Productos">
+	</form>
+		
+</div>
+
+<br><br>
+
+<!--PIE DE PÁGINA-->
+<footer>
+    <p align="center"><a href="https://linktr.ee/yen_hzu" target="_blank">Desarrollado por Yenifer Hernández</a></p>
+</footer>
+
+</body>
+</html>

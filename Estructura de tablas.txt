@@ -1,0 +1,62 @@
+Conectarse a la bd como root
+-->mysql -u root -p
+-->password: 
+
+create database examen_yenifer_hernandez;
+USE examen_yenifer_hernandez;
+
+CREANDO LAS TABLAS
+
+CREATE TABLE t_clientes(
+IdCliente int not null primary key,
+Nombre varchar(50) not null,
+Domicilio varchar(100) not null,
+Email varchar(50) not null);
+
+CREATE TABLE t_productos(
+idProducto int not null primary key,
+Nombre varchar(50) not null,
+Marca varchar(50) not null,
+Costo decimal(5,2) not null,
+PrecioVenta decimal(5,2) not null);
+
+
+CREATE TABLE t_facturas (
+    IdFactura int not null primary key,
+    NumeroFactura varchar(10) not null,
+    FechaHora datetime,
+    IdCliente int not null,
+    CONSTRAINT IdCliente
+    FOREIGN KEY (IdCliente)
+    REFERENCES t_clientes(IdCliente)
+);
+
+CREATE TABLE t_detalleFactura (
+idDetalle int not null primary key,
+idFactura int,
+CONSTRAINT IdFacturas
+FOREIGN KEY (IdFactura)
+REFERENCES t_facturas(IdFactura),
+idProducto int,
+CONSTRAINT idProducto
+FOREIGN KEY (IdProducto)
+REFERENCES t_productos(IdProducto),
+Cantidad int not null);
+
+CONSULTA PARA REPORTES
+
+/*ESTO ESTA BIEN*/
+SELECT 
+    t_facturas.NumeroFactura, 
+    t_facturas.FechaHora, 
+    t_facturas.IdCliente, 
+    t_clientes.Nombre AS NombreCliente, 
+    t_productos.Nombre AS NombreProducto, 
+    t_productos.idProducto, 
+    t_productos.Costo
+FROM 
+    t_facturas, t_productos, t_clientes
+WHERE 
+    t_facturas.IdCliente = '1' 
+    AND t_productos.idProducto = '1'
+    AND t_facturas.IdCliente = t_clientes.IdCliente;

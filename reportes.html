@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="icon" href="icono.png" type="image/x-icon">
+	<title>Reportes</title>
+</head>
+<body>
+
+<!--Menú de las secciones-->
+	<header id="main-header">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="clientes.html">Cliente</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="facturas.html">Facturas</a></li>
+                    <li><a href="detalleFactura.html">Detalles Facturas</a></li>
+                    <li><a href="reportes.html">Reportes</a></li>
+                </ul>
+            </nav>
+    </header>
+
+<!--Inicio del sitio y bienvenida-->
+    <h1>Reportes</h1>
+    	<h2>Consulta los reportes de tus clientes y sus facturas</h2>
+
+<!--Formulario para buscar datos de los clientes y los productos-->
+<form method="POST" action="reportes.php">
+    
+    <div align="center" class="formularios">
+    <p align="center">Sí deseas ver la información de un cliente en específico, ingresa los datos que se piden a continuación.
+        <br><br>Recuerda que debes saber el ID del cliente y ID específico del producto comprado.
+    </p>
+
+    <div>
+        <label>ID del cliente</label><br>
+        <input type="text" name="IdCliente" required="">
+    </div>
+
+    <br>
+
+    <div align="center">
+        <label>ID del producto</label><br>
+        <input type="text" name="idProducto" required="">
+    </div>
+
+    <br>
+
+    <div align="center">
+        <input id="boton1" type="submit" value="Buscar" name="Buscar"/>
+    
+    </div>
+</form>
+
+<br><br>
+
+<!--PARA VER LA INFORMACIÓN DE TODOS LOS USUARIOS-->
+
+<form method="POST" action="reportesAll.php">
+    <p>Consulta todos tus clientes</p>
+    <div align="center">
+        <input id="boton1" type="submit" value="Ver" name="Ver">
+    </div>
+    
+</form>
+
+
+<br><br><br><br>
+
+<!--PIE DE PÁGINA-->
+<footer>
+    <p align="center"><a href="https://linktr.ee/yen_hzu" target="_blank">Desarrollado por Yenifer Hernández</a></p>
+</footer>
+
+</body>
+</html>
